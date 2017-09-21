@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Details</title>
+<style>
+table, th {
+	text-align: left;
+}
+</style>
+</head>
+
+<body>
+
+	<!-- The user form starts from here -->
+	<form id=mainform action="SubmitUserDetailsToMYSQL" method="post">
+
+		<!-- The table which contains all the labels and text boxes.. -->
+		<table style="width: 35%" id="userdetails">
+			<tr>
+				<th>First name:</th>
+				<th><input type="text" name="firstname"></th>
+			</tr>
+			<tr>
+				<th>Last name:</th>
+				<th><input type="text" name="lastname"></th>
+			</tr>
+			<tr>
+				<th>Age:</th>
+				<th><input type="number" name="age" maxlength="2"></th>
+			</tr>
+			<tr>
+				<th>Company Name:</th>
+				<th><input type="text" name="companyname"></th>
+			</tr>
+			<tr>
+				<th>Designation:</th>
+				<th><input type="text" name="designation"></th>
+			</tr>
+			<tr>
+				<th>Country:</th>
+				<th><input type="text" name="country"></th>
+			</tr>
+			<tr>
+				<th>State:</th>
+				<th><input type="text" name="state"></th>
+			</tr>
+			<tr>
+				<th>City:</th>
+				<th><input type="text" name="city"></th>
+			</tr>
+			<tr>
+				<th>Contact No:</th>
+				<th>+ <input type="number" name="isdcode" maxlength="4"
+					size="2"><input type="number" name="contact" maxlength="12"
+					size="11"></th>
+			</tr>
+			<tr>
+				<th>Fax No:</th>
+				<th>+ <input type="number" name="isdcodefax" maxlength="4"
+					size="2"><input type="number" name="fax" maxlength="12"
+					size="11"></th>
+			</tr>
+			<tr>
+				<th>Email ID:</th>
+				<th><input type="text" name="email"></th>
+			</tr>
+		</table>
+		<br> <br>
+
+		<!-- A table to hold the Submit and Clear button -->
+		<table style="width: 30%" id="buttons">
+			<tr>
+				<th>
+					<!-- Button to Submit data to the database... -->
+					<button type="submit" value="Submit">Submit</button>
+				</th>
+				<!-- Button to refresh/reset the form... -->
+				<th><button type="reset" value="Reset">Reset</button></th>
+			</tr>
+		</table>
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+package com.user.register;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class SubmitUserDetailsToMYSQL
+ */
+@WebServlet("/SubmitUserDetailsToMYSQL")
+public class SubmitUserDetailsToMYSQL extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//This method is not needed as of now... could be used in some other form later....
+		System.out.println("Hello, This is the doGet method");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		//code to submit data to the database will come here...
+		String firstname = request.getParameter("firstname");
+		String lastname = request.getParameter("lastname");
+		/*String age = request.getParameter("age");
+		String companyname = request.getParameter("companyname");
+		String designation = request.getParameter("designation");
+		String country = request.getParameter("country");
+		String state = request.getParameter("state");
+		String city = request.getParameter("city");
+		String contactisd = request.getParameter("isdcode");
+		String contact = request.getParameter("contact");
+		String faxisd = request.getParameter("isdcodefax");
+		String fax = request.getParameter("fax");
+		String email = request.getParameter("email");*/
+		
+		 System.out.println("firstname: " + firstname);
+	     	System.out.println("lastname: " + lastname);
+	 
+	        // do some processing here...
+	         
+	        // get response writer
+	        PrintWriter writer = response.getWriter();
+	         
+	        // build HTML code
+	        String htmlRespone = "<html>";
+	        htmlRespone += "<h2>Your username is: " + firstname + "<br/>";      
+	        htmlRespone += "Your password is: " + lastname + "</h2>";    
+	        htmlRespone += "</html>";
+	         
+	        // return response
+	        writer.println(htmlRespone);
+	}
+}
