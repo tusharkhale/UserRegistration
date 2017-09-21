@@ -36,7 +36,7 @@ public class SubmitUserDetailsToMYSQL extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		// code to submit data to the database will come here...
+		// Read the entries from the form...
 		String firstname = request.getParameter("firstname");
 		String lastname = request.getParameter("lastname");
 		String age = request.getParameter("age");
